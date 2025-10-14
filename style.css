@@ -579,8 +579,8 @@ header .navbar {
 @media (max-width: 425px) {
   .primary__btn,
   .secondary__btn {
-    width: 100px;
-    padding: 8px 10px;
+    width: 125px;
+    padding: 12px 14px;
     font-size: 10px;
   }
   .hero__section {
