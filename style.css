@@ -516,18 +516,22 @@ header .navbar {
     padding-inline: 3.125rem;
     background: #0a0018;
     box-shadow: 0px 2px 3px #161616a1;
+    height: 80px;
+  }
+  .navbar .logo {
+    width: 60px;
   }
   .navbar .links {
     flex-direction: column;
     width: 300px;
     position: absolute;
-    top: 150px;
+    top: 80px;
     right: 0;
     margin-right: -1000px;
     background: #0a0018;
     z-index: 2;
     align-items: end;
-    height: 715px;
+    height: 785px;
     padding-block: 3.125rem;
     padding-right: 20px;
     transition: 0.2s ease-in-out;
@@ -549,6 +553,9 @@ header .navbar {
   }
   .hamburger-menu.active .line:nth-child(3) {
     transform: rotate(50deg);
+  }
+  .hero__section {
+    height: 80vh;
   }
   .about-us__section .about-us__content {
     justify-content: center;
