@@ -67,3 +67,40 @@ function mobileMenu() {
   });
 }
 mobileMenu();
+
+const imageContainer = document.querySelector(".images");
+const loadBtn = document.getElementById("load-more");
+const images = [
+  "image1.jpg",
+  "image2.jpg",
+  "image3.jpg",
+  "image4.jpg",
+  "image5.jpg",
+  "image6.jpg",
+  "image7.jpg",
+  "image8.jpg",
+  "image9.jpg",
+  "image10.jpg",
+  "image11.jpg",
+  "image12.jpg",
+  "image13.jpg",
+];
+let currentNum = 0;
+let imgRenderPerBatch = 8;
+function galleryImageRendering() {
+  const end = Math.min(currentNum + imgRenderPerBatch, images.length);
+  console.log(end);
+  for (let i = currentNum; i < end; i++) {
+    const img = document.createElement("img");
+    img.src = `./assets/gallery/${images[i]}`;
+    imageContainer.appendChild(img);
+  }
+  currentNum = end;
+
+  if (currentNum >= images.length) {
+    loadBtn.style.display = "none";
+  }
+}
+galleryImageRendering();
+
+loadBtn.addEventListener("click", galleryImageRendering);

@@ -24,7 +24,7 @@ h6 {
   text-transform: uppercase;
 }
 h3 {
-  font-size: clamp(20px, 3.3333vw, 74px);
+  font-size: clamp(28px, 3.3333vw, 74px);
 }
 li {
   list-style: none;
@@ -71,7 +71,8 @@ body {
 header {
   width: 100%;
   min-height: 100vh;
-  position: relative;
+
+  overflow: hidden;
 }
 header .video-bg {
   width: 100%;
@@ -99,7 +100,6 @@ header .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .navbar .logo {
@@ -409,7 +409,7 @@ header .navbar {
   display: flex;
   gap: clamp(20px, 5.2083vw, 120px);
   flex-wrap: wrap;
-  width: fit-content;
+  width: auto;
 }
 .our-advisers__section .advisers .advisers__card {
   display: flex;
@@ -425,6 +425,13 @@ header .navbar {
 .our-advisers__section .advisers .advisers__card .card__img {
   position: relative;
   overflow: hidden;
+  border-radius: 12px;
+  height: clamp(200px, 20.8333vw, 600px);
+  transition: 0.5s ease-in-out;
+  width: 100%;
+}
+.our-advisers__section .advisers .advisers__card .card__img:hover {
+  box-shadow: 0px 0px 27px #9c6eff;
 }
 .our-advisers__section .advisers .advisers__card .card__img img {
   width: clamp(200px, 20.8333vw, 600px);
@@ -454,7 +461,7 @@ header .navbar {
   }
 }
 .our-advisers__section .advisers .advisers__card .card__img span:nth-child(3) {
-  bottom: 5px;
+  bottom: 0;
   right: -700px;
   background: linear-gradient(90deg, #a25cff, #0b001a4f);
   animation: imgBorder3 1s linear infinite;
@@ -551,7 +558,44 @@ header .navbar {
 }
 
 /* FOOTER SECTION */
-
+.footer__section {
+  width: 100%;
+  padding: 50px clamp(20px, 5.2083vw, 120px);
+  height: auto;
+  background: linear-gradient(90deg, #0b001a, #2b0f52);
+  text-align: end;
+}
+.footer__section .copyright {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+.footer__section .footer__content {
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.footer__content .left__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 400px;
+}
+.footer__content .left__content img {
+  width: 102px;
+}
+.footer__content .left__content p {
+  font-size: 14px;
+}
+.footer__content .right__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
   header .navbar {
@@ -573,10 +617,11 @@ header .navbar {
     background: #0a0018;
     z-index: 2;
     align-items: end;
-    height: 93.5vh;
+    min-height: 100vh;
     padding-block: 3.125rem;
     padding-right: 20px;
     transition: 0.2s ease-in-out;
+    box-shadow: -1px 10px 10px #4f245577;
   }
   .hamburger-menu__container {
     display: block;
@@ -607,8 +652,25 @@ header .navbar {
     align-items: center;
     width: 100%;
   }
+  .our-advisers__section h3 {
+    margin-left: 20px;
+  }
   .our-advisers__section .advisers .advisers__card h1 {
     font-size: 28px;
+  }
+  .footer__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .footer__section .footer__content {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__content .left__content {
+    align-items: center;
+    width: 300px;
   }
 }
 
@@ -632,6 +694,10 @@ header .navbar {
     width: 100%;
   }
 
+  .our-advisers__section h3 {
+    margin-left: 0;
+    align-self: center;
+  }
   .our-advisers__section .jetpack {
     right: 0px;
   }
@@ -646,6 +712,13 @@ header .navbar {
   }
   .our-advisers__section .advisers .advisers__card span:nth-child(4) {
     display: none;
+  }
+  .footer__section {
+    font-size: 12px;
+  }
+  .footer__content .left__content p {
+    width: 220px;
+    font-size: 12px;
   }
 }
 
