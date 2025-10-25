@@ -84,12 +84,30 @@ const images = [
   "image11.jpg",
   "image12.jpg",
   "image13.jpg",
+  "image14.jpg",
+  "image15.jpg",
+  "image16.jpg",
+  "image17.jpg",
+  "image18.jpg",
+  "image19.jpg",
+  "image20.jpg",
+  "image21.jpg",
+  "image22.jpg",
+  "image23.jpg",
+  "image24.jpg",
+  "image25.jpg",
+  "image26.jpg",
+  "image27.jpg",
+  "image28.jpg",
+  "image29.jpg",
+  "image30.jpg",
+  "image31.jpg",
 ];
 let currentNum = 0;
 let imgRenderPerBatch = 8;
 function galleryImageRendering() {
   const end = Math.min(currentNum + imgRenderPerBatch, images.length);
-  console.log(end);
+
   for (let i = currentNum; i < end; i++) {
     const img = document.createElement("img");
     img.src = `./assets/gallery/${images[i]}`;
