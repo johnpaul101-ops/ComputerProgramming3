@@ -6,7 +6,11 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="galleryStyle.css" />
     <link rel="stylesheet" href="announcementStyle.css" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      href="./assets/458430458_122094525548521393_2377382610410909017_n-removebg-preview.png"
+    />
+    <title>Computer Programming 3</title>
   </head>
   <body>
     <header>
@@ -53,12 +57,6 @@
     </header>
 
     <section class="announcement__section">
-      <h3 class="title">
-        <span class="angle-bracket"><</span>Announcement<span
-          class="angle-bracket"
-          >/></span
-        >
-      </h3>
       <div class="announcement">
         <div class="no__announcement__message">
           <h3>
@@ -67,8 +65,70 @@
           <h3>
             <span class="angle-bracket">></span>Waiting for next update...
           </h3>
-          <div class="cursor"></div>
         </div>
+
+        <div class="terminal">
+          <div class="form__container">
+            <input
+              type="text"
+              placeholder="Announcement Title >"
+              class="title"
+            />
+            <textarea
+              name="description"
+              id="description"
+              placeholder="Description >"
+            ></textarea>
+          </div>
+
+          <div class="btns">
+            <button onclick="submitAnnouncement()" class="terminalBtn">
+              Submit Announcement
+            </button>
+            <button onclick="clearTerminal()" class="terminalBtn">
+              Clear Terminal
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards__container">
+        <!-- <div class="card">
+          <h1>This is my Description</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            sint iure, necessitatibus laborum, qui autem sunt voluptates facere
+            fuga nam architecto quas unde hic. Tempora, quaerat. Fuga tempore
+            veritatis fugiat.
+          </p>
+        </div>
+        <div class="card">
+          <h1>This is my Description</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            sint iure, necessitatibus laborum, qui autem sunt voluptates facere
+            fuga nam architecto quas unde hic. Tempora, quaerat. Fuga tempore
+            veritatis fugiat.
+          </p>
+        </div>
+        <div class="card">
+          <h1>This is my Description</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            sint iure, necessitatibus laborum, qui autem sunt voluptates facere
+            fuga nam architecto quas unde hic. Tempora, quaerat. Fuga tempore
+            veritatis fugiat.
+          </p>
+        </div>
+        <div class="card">
+          <h1>This is my Description</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            sint iure, necessitatibus laborum, qui autem sunt voluptates facere
+            fuga nam architecto quas unde hic. Tempora, quaerat. Fuga tempore
+            veritatis fugiat.
+          </p>
+        </div> -->
       </div>
     </section>
     <!-- Footer Section -->
@@ -95,4 +155,5 @@
     </footer>
   </body>
   <script src="script.js"></script>
+  <script src="announcement.js"></script>
 </html>
